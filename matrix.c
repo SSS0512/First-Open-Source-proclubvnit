@@ -21,15 +21,25 @@
 #define POWER 7
 #define ROWS 100
 #define COLS 100
+void Change(int r,int c,int Matrix[r][c])
+{
+    int i,j;
+    for(i=0;i<r;i++) {
+        for(j=0;j<c;j++) {
+            if(i==j) {
+                Matrix[i][j]++;
+                printf("%d ",Matrix[i][j]);
+            }
+            printf("\n");
+        }
 void PrintMatrix(int r,int c,int Matrix[][c])
 { int i,j;
-  for(i=0;i<r;i++)
-   {for(j=0;j<c;j++)
-     {printf("%d ",Matrix[i][j]);
+  for(i=0;i<r;i++) { 
+      for(j=0;j<c;j++){
+          printf("%d ",Matrix[i][j]);
       } 
       printf("\n");
     }
-    
 }
 void ReadMatrix(int r,int c,int Matrix[][c])
 {  int i,j;
